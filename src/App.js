@@ -1,7 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { batch } from 'react-redux';
+import Button from './components/Button';
+import Title from './components/Button';
+import SubTitle from './components/Button';
 
 function App() {
   const counter = useSelector(state => state);
@@ -9,23 +11,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{counter.num}</h1>
-      <h1>{counter.quote}</h1>
-      <button
-        onClick={() =>
-          batch(() => {
-            dispatch({
-              type: "INCREMENT",
-              step: 1
-            });
-            dispatch({
-              type: "DATE",
-            });
-          })
-        }
-      >
-        Increment
-      </button>
+      <Title />
+      <SubTitle />
+      <Button />
     </div>
   );
 }
