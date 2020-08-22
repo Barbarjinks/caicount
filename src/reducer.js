@@ -1,4 +1,4 @@
-import Quote from "./redux/actions/Quote";
+import FETCH_QUOTE from "./redux/actions/Quote";
 
 function reducer(state = { num: 0, quote: 'Quote' }, action) {
   switch (action.type) {
@@ -12,10 +12,11 @@ function reducer(state = { num: 0, quote: 'Quote' }, action) {
         ...state,
         num: state.num
       };
-    case "DATE":
+    case "FETCH_QUOTE":
+      console.log(action)
+
       return {
         ...state,
-        quote: Quote
       };
     default:
       return state;

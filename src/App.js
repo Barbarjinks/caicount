@@ -2,13 +2,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import Button from './components/Button';
-import Title from './components/Button';
-import SubTitle from './components/Button';
-
+import Title from './components/Title';
+import SubTitle from './components/SubTitle';
 function App() {
   const counter = useSelector(state => state);
   const dispatch = useDispatch();
-
   return (
     <div className="App">
       <Title />
@@ -17,5 +15,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

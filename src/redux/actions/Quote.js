@@ -1,17 +1,13 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+export const FETCH_QUOTE = 'FETCH_QUOTE';
 
-function Quote() {
-    const [newQuote, setQuote] = useState(null);
+export function getQuote() {
 
-    useEffect(() => {
-       fetch('https://random-math-quote-api.herokuapp.com/')
-        .then(results => results.json())
-        .then(data => {
-            const {quote} = data.results[0];
-            setQuote(quote.quote)
-        })
-    }, []);
+const request = axios.get('https://random-math-quote-api.herokuapp.com/');
+console.log(request);
+    return{
+        type: FETCH_QUOTE,
+        payload: request.quote
+    };
+    
 }
-
-export default Quote

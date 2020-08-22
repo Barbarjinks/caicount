@@ -16,7 +16,8 @@ function Button() {
               step: 1
             });
             dispatch({
-              type: "DATE",
+              type: "FETCH_QUOTE",
+              payload: 1
             });
           })
         }

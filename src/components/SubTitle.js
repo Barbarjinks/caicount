@@ -3,10 +3,10 @@ import { useSelector } from "react-redux";
 
 
 function SubTitle() {
-  const counter = useSelector(state => state);
+  const quoteCeator = useSelector(state => state);
 
   return (
-      <h2>{counter.quote}</h2>
+      <h2>{quoteCeator.quote}</h2>
   );
 }
 
